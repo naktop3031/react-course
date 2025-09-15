@@ -7,18 +7,18 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <>
-        <div style={{display: "flex", justifyContent: "space-around"}}>
+        <div style={{display: "flex", justifyContent: "space-around", alignItems: "center"}}>
           <NavLink
             to={"/popular"}
             className={({isActive}) => "nav-link" + (isActive ? " active" : "")}
           >
-            <h3 className="nav-link">Popular</h3>
+            <p className="nav-link">Popular</p>
           </NavLink>
           <NavLink
             to={"/battle"}
             className={({isActive}) => "nav-link" + (isActive ? " active" : "")}
           >
-            <h3 className="nav-link">Battle</h3>
+            <p className="nav-link">Battle</p>
           </NavLink>
           <button className="btn" onClick={this.props.toggleTheme}>
             {" "}
