@@ -7,6 +7,7 @@ import Loading from "./components/Loading";
 const Popular = React.lazy(() => import("./components/Popular"));
 const Battle = React.lazy(() => import("./components/Battle"));
 const NavBar = React.lazy(() => import("./components/Navbar"));
+const Welcome = React.lazy(() => import("./components/Welcome"));
 
 class App extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class App extends React.Component {
             <NavBar theme={this.state.theme} toggleTheme={this.toggleTheme} />
             <React.Suspense fallback={<Loading />}>
               <Routes>
+                <Route path="/" element={<Welcome />} />
                 <Route path="popular" element={<Popular />} />
                 <Route path="battle" element={<Battle />} />
               </Routes>
